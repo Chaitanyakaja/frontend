@@ -1,0 +1,52 @@
+.page-header {
+    background-color: #000009;
+    margin-top: 0;
+    padding: 20px 20px 0px 40px;
+    font-family: "Sans-Serif" ;
+}
+h1 {
+    font-family: "Sans-Serif" ;
+    font-weight: bolder;
+    color: #8AB049;
+}
+body{
+  background-image: url("images/new_growth.JPG");
+  background-size: cover;
+  background-repeat: repeat-x;
+  size: large;
+}
+.table th {
+  font-weight: bolder;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+/* input[type=text] {
+  border: 0;
+  border-bottom: 2px solid #bbb;
+  outline: 0;
+  margin: 20px 0;
+  padding: 10px 20px;
+  width: 260px;
+  text-align: left;
+}*/
+input[type=submit] {
+  /*margin: px 19px 0;
+  padding: 13px 0;*/
+  border: 2px solid DarkGrey;
+  border-radius: 4px;
+  opacity: 1;
+  /*text-align: center;*/
+  width: 25%;
+  /*background: #087;*/
+  outline: 0;
+  color: #000;
+  font-size: 18px;
+}
+
+.table {
+  font-size: 18px;
+  width: 75%;
+  /*display: block;*/
+	float:left;
+  padding:20px 20px 20px 40px
+}

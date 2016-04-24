@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>STORC</title>
+        <div class = "page-header">
+          <h1> Sensor Data </h1>
+        </div>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/main.css">
+    </head>
+    <body>
+        {% block content %}
+      <div class="table">
+        <form action="{{url_for('update')}}">
+          <table>
+            <tr>
+              <th>Temp: </th>
+              <td><input type="text" name="Temp" value = {{sensors[1].reading}}></td>
+            </tr>
+            <tr>
+              <th>pH: </th>
+              <td><input type="text" name="pH" value = {{sensors[2].reading}} ></td>
+            </tr>
+            <tr>
+              <th>do: </th>
+              <td><input type="text" name="do" value = {{sensors[3].reading}} ></td>
+            </tr>
+          </table><br><br>
+          <input type="submit" value="Update">
+        </form>
+      </div>
+        {% endblock %}
+    </body>
+</html>

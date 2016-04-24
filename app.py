@@ -1,4 +1,4 @@
-#Connor Aitken
+
 #connor.aitken@gmail.com
 
 
@@ -41,7 +41,7 @@ def main():
 #the function below is executed when someone requests a url with the pin number and action in it:
 @app.route("/<changePin>/<action>")
 def action(changePin, action):
-	
+
    # Convert the pin from the URL into an integer:
    changePin = int(changePin)
    # Get the device name for the pin being changed:

@@ -7,7 +7,7 @@ import time
 app = Flask(__name__)
 
 #opens serial connection to arduino
-usbport = '/dev/cu.usbmodemfa131'
+usbport = '/dev/cu.usbmodemfd121'
 ser = serial.Serial(usbport,9600)
 
 sensors= {
@@ -18,16 +18,17 @@ sensors= {
 }
 
 def get_temp():
-    #ser.write('1:r')
-    reading  = ser.readline()
-    sensors[1]['reading']= reading
-    return sensors
+	ser.write('t')
+	reading  = ser.readline()
+	sensors[1]['reading']= reading
+	return sensors
+
 
 def get_ph():
     #takes reading from EC sensor
-    #ser.write('1:r')
-    #reading  = ser.readline()
-    sensors[2]['reading'] = 3
+    ser.write('h')
+    reading  = ser.readline()
+    sensors[2]['reading'] = reading
     return sensors
 
 def get_do():
@@ -50,7 +51,7 @@ def update():
 
     temp = get_temp()
     ph = get_ph()
-    do = get_do()
+    #do = get_do()
 
     return redirect(url_for('index'))
 

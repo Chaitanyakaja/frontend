@@ -19,16 +19,6 @@
               <th>{{sensors[num].name}}:</th>
               <td><input type="text" name="temp" value = {{sensors[num].reading}}></td>
             </tr>
-            <!-- <tr>
-              <th>Humidity: </th>
-              {% for i in range(100) %}
-              <td><input type="text" name="humidity" value =  ></td>
-              {% endfor %}
-            </tr> -->
-            <!--<tr>
-              <th>do: </th>
-              <td><input type="text" name="do" value =  ></td>
-            </tr>-->
             {% endfor %}
           </table><br><br>
           <input type="submit" value="Update">

@@ -8,11 +8,11 @@ import time
 app = Flask(__name__)
 
 #opens serial connection to arduino
-usbport = '/dev/cu.usbmodemfa131'
-#usbport = '/dev/cu.usbmodemfd121'
+#usbport = '/dev/cu.usbmodemfa131'
+usbport = '/dev/cu.usbmodemfd121'
 ser = serial.Serial(usbport,9600)
 
-sensors= {
+sensors = {
 	1 : {'name' : 'Temp', 'command' : 't', 'reading' : 0},
 	2 : {'name' : 'pH', 'command' : 'h', 'reading' : 0}
 }
